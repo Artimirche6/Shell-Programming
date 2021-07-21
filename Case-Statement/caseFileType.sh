@@ -5,7 +5,7 @@ for fileName in $(ls)
 do 
 	ext=${fileName##*\.}
 		
-		case "ext" in
+		case "$ext" in
 		
 			java)
 				echo $fileName : Java source file

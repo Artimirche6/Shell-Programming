@@ -3,10 +3,9 @@
 feet1=60
 feet2=40
 
-meters1=$(($feet1*3))
-meters2=$(($feet2*3))
+feet=$(($feet1*$feet2))
+echo Result in FeetResult in Feet :: $feet ft 
 
-meters=$(($meters1*$meters2))
-
-echo " Rectangular plot of 60 feet * 40 feet in meter :: " $meters 
+meter=$(awk 'BEGIN {printf "%.3f\n", '$feet' / 3.281}')
+echo Rectangular plot of 60 feet x 40 feet in meter :: $meter m 
 
